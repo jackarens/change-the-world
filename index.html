@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Personal Impact model</title>
+  <title>Change the World</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
 
 </head>
 
-<body id="page-top" class="index" style="background-color: #808285;">
+<body id="page-top" class="index" style="background-color: whitesmoke;">
   <!-- <div style='position:absolute;top:0px;left:0px;width:100%;height:100%' id="impact"></div> -->
   <div id="impact-parent" style='width:100%;height:100%;position: absolute;top: 0px;right: 0px;'>
     <div id="impact"></div>
@@ -42,10 +42,10 @@
   <div class="row" style="z-index: 500 !important;">
     <h1 class="text-center" style="color: black; position: relative;">Change the World</h1>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter"
-      style='position: absolute; right: 20px; top: 20px; background-color: #f5f1e7; color: black;'>
+      style='position: absolute; right: 20px; top: 20px; background-color: #808285; color: #f5f1e7;'>
       Control Panel
     </button>
-    <button id="reset1" type="button" class="btn btn-primary" style="position: absolute; left: 20px; top: 20px; background-color: #f5f1e7; color: black;"><span
+    <button id="reset1" type="button" class="btn btn-primary" style="position: absolute; left: 20px; top: 20px;background-color: #808285; color: #f5f1e7;"><span
       class="glyphicon glyphicon-step-backward" aria-hidden="true"></span>Reset</button>
   </div>
   <!-- Modal -->
@@ -62,24 +62,29 @@
         <div class="modal-body">
           <div id="control-panel" style='width:auto; height:auto; padding-left: 10px;'>
             <div class="row">
+              <h4>Information</h4>
+              <p>This is a test</p>
+            </div>
+            <div class="row">
               <form class="form">
                 <h4>Settings</h4>
                 <div class="form-group">
-                  <label for="inputr0">Impact per person</label>
-                  <input id="impactNum" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10"
-                    data-slider-step="1" data-slider-value="2" />
+                  <label for="inputr0">Impact per person<font style="color: white;">~</font></label>
+                  <input id="impactNum" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="50"
+                    data-slider-step="1" data-slider-value="5" />
+                    <p style="font-size: 14px;">The impact per person is the number of other individuals that can be impacted by each person in a single round.</p>
                 </div>
                 <div class="form-group">
-                  <label for="inputs">Willingness to have an impact</label>
+                  <label for="inputs">Willingness to have an impact<font style="color: white;">~</font></label>
                   <input id="willingness" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100"
-                    data-slider-step="1" data-slider-value="50" />
-                  <small id="emailHelp" class="form-text text-muted"></small>
+                    data-slider-step="1" data-slider-value="25" />
+                  <p style="font-size: 14px;">Willingness to have an impact is the probability that an individual will "pay it forward".  A willingness of 1 means that only 1% of people will pass on their impact, while a willingness of 100 means that everyone will.</p>
                 </div>
                 <div class="form-group">
-                  <label for="inputs">Size of group</label>
-                  <input id="size" data-slider-id='ex1Slider' type="text" data-slider-min="10" data-slider-max="1500"
+                  <label for="inputs">Size of group<font style="color: white;">~</font></label>
+                  <input id="size" data-slider-id='ex1Slider' type="text" data-slider-min="10" data-slider-max="2000"
                     data-slider-step="5" data-slider-value="1250" />
-                  <small id="emailHelp" class="form-text text-muted"></small>
+                  <p style="font-size: 14px;">The size of the group is the number of individuals present.  Use the <i>Reset</i> button to see this change take effect.</p>
                 </div>
                 <div class="form-group">
                   <button id="pause" type="button" class="btn btn-default" style="background-color: #808285; color: #f5f1e7;"><span class="glyphicon glyphicon-pause"

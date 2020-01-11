@@ -25,8 +25,11 @@ var size = 1250;
 var pause = false;
 var impactNum = 2;
 var willingness = 0.5;
+var finished = 0;
 
 function startSim() {
+  finishes = 0;
+  pause = false;
   d3.select("svg").remove();
   svg = d3.select("#impact").append("svg:svg")
     .attr("width", w)
@@ -53,12 +56,7 @@ function startSim() {
     .enter().append("svg:circle")
     .attr("r", function (d) { return d.radius; })
     .style("fill", function (d, i) { return redColorArray[0]; })
-    .on("click", function (d, i) {
-      d.radius = 20;
-      d3.select(this).attr('stroke', 'black');
-      nodes[i].touches = nodes[i].touches + 1;
-      force.resume();
-    });
+
   button = svg.append('svg:text')
 
     .text('reset')
@@ -96,16 +94,18 @@ startSim();
 /*Run simulation of impact every second. */
 setInterval(function () {
   if (!pause) {
+    finished = 0;
     var i = 0, n = nodes.length;
-    var finished = 0;
 
     for (i = 0; i < n; i++) {
       nodes[i].touched = false;
       if (nodes[i].touches > 0 & (nodes[i].willing <= willingness) & !nodes[i].touched) {
         for (j = 0; j < impactNum; j++) {
           let randomNode = Math.floor(Math.random() * n);
-          nodes[randomNode].touches += 1;
-          nodes[randomNode].touched = true;
+          if(Math.random() < 0.5) {
+            nodes[randomNode].touches += 1;
+            nodes[randomNode].touched = true;
+          }
         }
       }
       if(nodes[i].touches >= redColorArray.length){
@@ -124,9 +124,9 @@ setInterval(function () {
       return col;
     });
 
+    mousedown();
     console.log(finished);
   }
-
 }, 1000);
 
 // svg.on("mousemove", function () {
@@ -163,7 +163,7 @@ function collide(node) {
   };
 }
 
-d3.select("body").on("mousedown", mousedown);
+// d3.select("body").on("mousedown", mousedown);
 
 function mousedown() {
   nodes.forEach(function(o, i) {
