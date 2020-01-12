@@ -4,3 +4,6 @@ Simple javascript web tool for understanding how one person can change the world
 ## dependencies
 
 This should work 'out of the box' with the js included. Some of the libraries used include `Plotly.js` , `d3.js` and `Bootstrap`
+
+## website
+[View a demo here](https://jackarens.github.io/change-the-world/ Change the World)
