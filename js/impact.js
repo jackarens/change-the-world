@@ -99,7 +99,7 @@ setInterval(function () {
 
     for (i = 0; i < n; i++) {
       nodes[i].touched = false;
-      if (nodes[i].touches > 0 & (nodes[i].willing <= willingness) & !nodes[i].touched) {
+      if (nodes[i].touches > 0 & (nodes[i].willing <= (willingness + (finished/size))) & !nodes[i].touched) {
         for (j = 0; j < impactNum; j++) {
           let randomNode = Math.floor(Math.random() * n);
           if(Math.random() < 0.5) {
