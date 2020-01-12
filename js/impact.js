@@ -38,7 +38,7 @@ function startSim() {
   nodes = d3.range(size).map(function () { return { radius: 10, infected: Math.random() < 0.01, touches: 0, willing: Math.random() }; });
 
   force = d3.layout.force()
-    .gravity(0.002)
+    .gravity(0.0025)
     .charge(function (d, i) { return i ? 0 : -50; })
     .nodes(nodes)
     .size([w, h]);

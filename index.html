@@ -66,23 +66,23 @@
           </button>
         </div>
         <div class="modal-body">
-          <div id="control-panel" style='width:auto; height:auto; padding-left: 10px;'>
+          <div id="control-panel" style='width:auto; height:auto; padding-left: 10px; padding-right: 10px;'>
             <div class="row">
               <h4>Information</h4>
-              <p>This is a test</p>
+              <p style="font-size: 16px;">This project is a visualization of the effect a single person can have on a group. The cream-colored dots on the page represent individuals. Starting with just a single individual, each round of the simulation shares personal inspiration with several more people. Upon impact, individuals grow a shade darker (towards our beloved scarlet) and begin influencing the world themselves. Like an epidemic of positive change, a single individual’s impact spreads to others, who in turn spread it even further.</p>
             </div>
             <div class="row">
               <form class="form">
                 <h4>Settings</h4>
                 <div class="form-group">
                   <label for="inputr0">Impact per person<font style="color: white;">~</font></label>
-                  <input id="impactNum" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="50"
+                  <input id="impactNum" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="50"
                     data-slider-step="1" data-slider-value="5" />
                     <p style="font-size: 14px;">The impact per person is the number of other individuals that can be impacted by each person in a single round.</p>
                 </div>
                 <div class="form-group">
                   <label for="inputs">Willingness to have an impact<font style="color: white;">~</font></label>
-                  <input id="willingness" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="100"
+                  <input id="willingness" data-slider-id='ex1Slider' type="text" data-slider-min="1" data-slider-max="100"
                     data-slider-step="1" data-slider-value="25" />
                   <p style="font-size: 14px;">Willingness to have an impact is the probability that an individual will "pay it forward".  A willingness of 1 means that only 1% of people will pass on their impact, while a willingness of 100 means that everyone will.</p>
                 </div>
