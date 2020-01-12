@@ -1,5 +1,5 @@
-# epidemic-model
-Simple javascript web tool for understanding an epidemic model on a lattice
+# change-the-world
+Simple javascript web tool for understanding how one person can change the world. Based on an epidemic model by @sempwn.
 
 ## dependencies
 
